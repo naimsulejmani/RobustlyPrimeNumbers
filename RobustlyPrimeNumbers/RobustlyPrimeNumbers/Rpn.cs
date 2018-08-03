@@ -53,7 +53,7 @@ namespace RobustlyPrimeNumbers
         //}
         public bool AreLastDigitsRpn(int number)
         {
-            if (number < 10 && number == 2) return true;
+            if (number == 2) return true;
 
             var lastDigit = number % 10;
 
@@ -72,7 +72,7 @@ namespace RobustlyPrimeNumbers
 
         int[] GetLowAndHighRangeOfRpn(int numElems, int[] arr, int target)
         {
-            int low = 4, high = numElems; // numElems is the size of the array i.e arr.size() 
+            int low = 4, high = numElems; // numElems is the size of the array i.e arr.size()
             while (low != high)
             {
                 int mid = (low + high) / 2; // Or a fancy way to avoid int overflow
